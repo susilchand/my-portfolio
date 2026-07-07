@@ -18,7 +18,7 @@ export default function Home() {
     const handleScroll = () => {
       const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
       const scrollPosition = window.scrollY + 100;
-      
+
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -49,9 +49,8 @@ export default function Home() {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className={`hover:text-blue-400 transition-colors ${
-                  activeSection === item.toLowerCase() ? 'text-blue-400' : 'text-gray-400'
-                }`}
+                className={`hover:text-blue-400 transition-colors ${activeSection === item.toLowerCase() ? 'text-blue-400' : 'text-gray-400'
+                  }`}
               >
                 {item}
               </button>
@@ -77,13 +76,13 @@ export default function Home() {
                 Building modern, scalable web applications with a passion for clean code and great design.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <button 
+                <button
                   onClick={() => scrollToSection('contact')}
                   className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full transition-all transform hover:scale-105"
                 >
                   Get in Touch
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('projects')}
                   className="border border-gray-600 hover:border-blue-400 px-8 py-3 rounded-full transition-all"
                 >
@@ -92,22 +91,22 @@ export default function Home() {
               </div>
               {/* Social Links */}
               <div className="flex space-x-4 pt-6">
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="https://github.com/susilchand" className="text-gray-400 hover:text-blue-400 transition-colors">
                   <span className="sr-only">GitHub</span>
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
                   </svg>
                 </a>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="https://www.linkedin.com/in/susil-kyan-724546250/" className="text-gray-400 hover:text-blue-400 transition-colors">
                   <span className="sr-only">LinkedIn</span>
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>
                 </a>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="https://x.com/SusilChand7" className="text-gray-400 hover:text-blue-400 transition-colors">
                   <span className="sr-only">Twitter</span>
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                 </a>
               </div>
@@ -132,11 +131,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-4">
               <p className="text-gray-300 leading-relaxed">
-                I'm a passionate Full Stack Developer with expertise in building modern web applications. 
+                I'm a passionate Full Stack Developer with expertise in building modern web applications.
                 With a strong foundation in both frontend and backend technologies, I create seamless digital experiences.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                My journey in tech started with a curiosity for how things work on the web. Today, 
+                My journey in tech started with a curiosity for how things work on the web. Today,
                 I'm dedicated to writing clean, efficient code and staying current with industry trends.
               </p>
               <div className="grid grid-cols-2 gap-4 pt-4">
@@ -145,7 +144,7 @@ export default function Home() {
                   <p className="text-gray-400">Years Experience</p>
                 </div>
                 <div className="bg-[#1a1a1a] p-4 rounded-lg">
-                  <p className="text-2xl font-bold text-blue-400">15+</p>
+                  <p className="text-2xl font-bold text-blue-400">10+</p>
                   <p className="text-gray-400">Projects Completed</p>
                 </div>
               </div>
@@ -196,20 +195,35 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                title: 'E-Commerce Platform',
-                desc: 'Full-stack e-commerce with payment integration',
-                tech: ['React', 'Node.js', 'MongoDB']
+                title: 'Loan Management System',
+                desc: 'Web-based Loan Management System supports loan applications, approvals, interest/principal payments, guarantor management, savings accounts & automated settlements. Multi-role system for Admins, Staff & Customers.',
+                tech: ['Java', 'JavaScript', 'PostgreSQL']
               },
               {
-                title: 'Portfolio Website',
-                desc: 'Modern portfolio with animations and dark mode',
-                tech: ['Next.js', 'Tailwind', 'Framer Motion']
+                title: 'Donation Service Platform',
+                desc: 'Donation Service Provider is a web-based donation platform that allows users to create fundraising campaigns, donate to causes, track donation progress, and claim collected funds through a simple and user-friendly interface.',
+                tech: ['PHP', 'JavaScript', 'MySQL']
+              },
+               {
+                title: 'Dental Clinic Management System',
+                desc: 'The Dental Clinic Management System is a comprehensive desktop application designed to streamline the daily operations of a dental clinic. It provides an intuitive interface for managing patients, appointments, treatments, inventory, prescriptions, and staff records',
+                tech: ['C#', 'MySQL']
               },
               {
-                title: 'Task Management App',
-                desc: 'Collaborative task management with real-time updates',
-                tech: ['React', 'Firebase', 'Material-UI']
-              }
+                title: 'Image Based Quiz Generator',
+                desc: 'AI-Powered Image Quiz Generator - Automatically creates interactive quizzes from images using BLIP AI models. Features image enhancement, adaptive difficulty, user authentication, and performance tracking.Transform any image into an engaging learning experience',
+                tech: ['Python', 'MySQL']
+              },
+              {
+                title: 'SmartShare Platform',
+                desc: 'This is a Knowledge Sharing Platform with lots of categories and functions and admin panel and also have like and favorite features with each users having their own profiles and they can maintain that as they want',
+                tech: ['Java EE', 'JavaScript', 'MySQL']
+              },
+               {
+                title: 'Pagoda Digital Directory(Bago Region)',
+                desc: 'The Pagoda Management System is a government-initiated project developed in 2024 as a collaborative effort between our university and the relevant government authorities. This comprehensive digital platform was designed to modernize and streamline the management of pagodas, temples, and religious sites across the region',
+                tech: ['WordPress','MySQL']
+              }               
             ].map((project, index) => (
               <div key={index} className="bg-[#1a1a1a] p-6 rounded-xl hover:transform hover:-translate-y-2 transition-all">
                 <div className="w-full h-48 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-lg mb-4 flex items-center justify-center text-4xl">
@@ -225,8 +239,8 @@ export default function Home() {
                   ))}
                 </div>
                 <div className="mt-4 flex space-x-3">
-                  <a href="#" className="text-blue-400 hover:underline">Live Demo →</a>
-                  <a href="#" className="text-gray-400 hover:text-white">GitHub</a>
+                 
+                  {/* <a href="https://github.com/susilchand" className="text-gray-400 hover:text-white">GitHub</a> */}
                 </div>
               </div>
             ))}
@@ -242,18 +256,6 @@ export default function Home() {
           </h2>
           <div className="space-y-6">
             {[
-              {
-                title: 'Full Stack Developer',
-                company: 'Tech Company Inc.',
-                period: '2023 - Present',
-                desc: 'Building scalable web applications with React and Node.js'
-              },
-              {
-                title: 'Junior Developer',
-                company: 'StartUp Studio',
-                period: '2022 - 2023',
-                desc: 'Developed responsive websites and learned modern frameworks'
-              },
               {
                 title: 'Freelance Developer',
                 company: 'Self-Employed',
@@ -289,12 +291,12 @@ export default function Home() {
             <div className="bg-[#1a1a1a] p-6 rounded-xl">
               <div className="text-3xl mb-2">📧</div>
               <p className="font-medium">Email</p>
-              <p className="text-gray-400 text-sm">your.email@example.com</p>
+              <p className="text-gray-400 text-sm">susilkyan1@gmail.com</p>
             </div>
             <div className="bg-[#1a1a1a] p-6 rounded-xl">
               <div className="text-3xl mb-2">📍</div>
               <p className="font-medium">Location</p>
-              <p className="text-gray-400 text-sm">Your City, Country</p>
+              <p className="text-gray-400 text-sm">Phyu Township, Bago</p>
             </div>
             <div className="bg-[#1a1a1a] p-6 rounded-xl">
               <div className="text-3xl mb-2">💼</div>
